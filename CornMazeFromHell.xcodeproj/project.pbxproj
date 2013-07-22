@@ -24,6 +24,16 @@
 		1432B27F179DA2BE0032B5C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1432B25A179DA2BE0032B5C7 /* UIKit.framework */; };
 		1432B287179DA2BE0032B5C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1432B285179DA2BE0032B5C7 /* InfoPlist.strings */; };
 		1432B289179DA2BE0032B5C7 /* CornMazeFromHellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B288179DA2BE0032B5C7 /* CornMazeFromHellTests.m */; };
+		1432B293179DA4260032B5C7 /* lvl1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1432B292179DA4260032B5C7 /* lvl1.txt */; };
+		1432B296179DA4B40032B5C7 /* DRSFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B295179DA4B40032B5C7 /* DRSFileReader.m */; };
+		1432B299179DB7710032B5C7 /* DRSGridObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B298179DB7710032B5C7 /* DRSGridObject.m */; };
+		1432B29F179DB8C50032B5C7 /* DRSGridTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B29E179DB8C50032B5C7 /* DRSGridTree.m */; };
+		1432B2A1179DD8110032B5C7 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 1432B2A0179DD8110032B5C7 /* tree.png */; };
+		1432B2A4179DDA5F0032B5C7 /* DRSGridPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B2A3179DDA5F0032B5C7 /* DRSGridPlayer.m */; };
+		1432B2A6179DDD3C0032B5C7 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 1432B2A5179DDD3C0032B5C7 /* player.png */; };
+		1432B2A9179DDDAC0032B5C7 /* DRSGridTeleport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B2A8179DDDAC0032B5C7 /* DRSGridTeleport.m */; };
+		1432B2AC179DE0CE0032B5C7 /* DRSGridGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B2AB179DE0CE0032B5C7 /* DRSGridGoal.m */; };
+		1432B2AF179DE3AC0032B5C7 /* DRSMazeGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B2AE179DE3AC0032B5C7 /* DRSMazeGrid.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +70,23 @@
 		1432B284179DA2BE0032B5C7 /* CornMazeFromHellTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CornMazeFromHellTests-Info.plist"; sourceTree = "<group>"; };
 		1432B286179DA2BE0032B5C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1432B288179DA2BE0032B5C7 /* CornMazeFromHellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CornMazeFromHellTests.m; sourceTree = "<group>"; };
+		1432B292179DA4260032B5C7 /* lvl1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lvl1.txt; sourceTree = "<group>"; };
+		1432B294179DA4B40032B5C7 /* DRSFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSFileReader.h; sourceTree = "<group>"; };
+		1432B295179DA4B40032B5C7 /* DRSFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSFileReader.m; sourceTree = "<group>"; };
+		1432B297179DB7710032B5C7 /* DRSGridObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSGridObject.h; sourceTree = "<group>"; };
+		1432B298179DB7710032B5C7 /* DRSGridObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSGridObject.m; sourceTree = "<group>"; };
+		1432B29D179DB8C50032B5C7 /* DRSGridTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRSGridTree.h; path = ../DRSGridTree.h; sourceTree = "<group>"; };
+		1432B29E179DB8C50032B5C7 /* DRSGridTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRSGridTree.m; path = ../DRSGridTree.m; sourceTree = "<group>"; };
+		1432B2A0179DD8110032B5C7 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
+		1432B2A2179DDA5F0032B5C7 /* DRSGridPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSGridPlayer.h; sourceTree = "<group>"; };
+		1432B2A3179DDA5F0032B5C7 /* DRSGridPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSGridPlayer.m; sourceTree = "<group>"; };
+		1432B2A5179DDD3C0032B5C7 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		1432B2A7179DDDAC0032B5C7 /* DRSGridTeleport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSGridTeleport.h; sourceTree = "<group>"; };
+		1432B2A8179DDDAC0032B5C7 /* DRSGridTeleport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSGridTeleport.m; sourceTree = "<group>"; };
+		1432B2AA179DE0CE0032B5C7 /* DRSGridGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSGridGoal.h; sourceTree = "<group>"; };
+		1432B2AB179DE0CE0032B5C7 /* DRSGridGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSGridGoal.m; sourceTree = "<group>"; };
+		1432B2AD179DE3AC0032B5C7 /* DRSMazeGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSMazeGrid.h; sourceTree = "<group>"; };
+		1432B2AE179DE3AC0032B5C7 /* DRSMazeGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSMazeGrid.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,16 +148,33 @@
 		1432B25E179DA2BE0032B5C7 /* CornMazeFromHell */ = {
 			isa = PBXGroup;
 			children = (
+				1432B29D179DB8C50032B5C7 /* DRSGridTree.h */,
+				1432B29E179DB8C50032B5C7 /* DRSGridTree.m */,
 				1432B267179DA2BE0032B5C7 /* DRSAppDelegate.h */,
 				1432B268179DA2BE0032B5C7 /* DRSAppDelegate.m */,
 				1432B26A179DA2BE0032B5C7 /* Main.storyboard */,
 				1432B26D179DA2BE0032B5C7 /* DRSViewController.h */,
+				1432B2AA179DE0CE0032B5C7 /* DRSGridGoal.h */,
+				1432B2AB179DE0CE0032B5C7 /* DRSGridGoal.m */,
+				1432B2AD179DE3AC0032B5C7 /* DRSMazeGrid.h */,
+				1432B2AE179DE3AC0032B5C7 /* DRSMazeGrid.m */,
 				1432B26E179DA2BE0032B5C7 /* DRSViewController.m */,
 				1432B270179DA2BE0032B5C7 /* DRSMyScene.h */,
+				1432B294179DA4B40032B5C7 /* DRSFileReader.h */,
+				1432B295179DA4B40032B5C7 /* DRSFileReader.m */,
 				1432B271179DA2BE0032B5C7 /* DRSMyScene.m */,
+				1432B297179DB7710032B5C7 /* DRSGridObject.h */,
+				1432B298179DB7710032B5C7 /* DRSGridObject.m */,
+				1432B2A2179DDA5F0032B5C7 /* DRSGridPlayer.h */,
+				1432B2A3179DDA5F0032B5C7 /* DRSGridPlayer.m */,
+				1432B2A7179DDDAC0032B5C7 /* DRSGridTeleport.h */,
+				1432B2A8179DDDAC0032B5C7 /* DRSGridTeleport.m */,
 				1432B273179DA2BE0032B5C7 /* Spaceship.png */,
 				1432B275179DA2BE0032B5C7 /* Images.xcassets */,
 				1432B25F179DA2BE0032B5C7 /* Supporting Files */,
+				1432B292179DA4260032B5C7 /* lvl1.txt */,
+				1432B2A5179DDD3C0032B5C7 /* player.png */,
+				1432B2A0179DD8110032B5C7 /* tree.png */,
 			);
 			path = CornMazeFromHell;
 			sourceTree = "<group>";
@@ -241,10 +285,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1432B2A6179DDD3C0032B5C7 /* player.png in Resources */,
 				1432B263179DA2BE0032B5C7 /* InfoPlist.strings in Resources */,
 				1432B276179DA2BE0032B5C7 /* Images.xcassets in Resources */,
 				1432B274179DA2BE0032B5C7 /* Spaceship.png in Resources */,
+				1432B2A1179DD8110032B5C7 /* tree.png in Resources */,
 				1432B26C179DA2BE0032B5C7 /* Main.storyboard in Resources */,
+				1432B293179DA4260032B5C7 /* lvl1.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +310,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1432B299179DB7710032B5C7 /* DRSGridObject.m in Sources */,
 				1432B272179DA2BE0032B5C7 /* DRSMyScene.m in Sources */,
 				1432B269179DA2BE0032B5C7 /* DRSAppDelegate.m in Sources */,
+				1432B296179DA4B40032B5C7 /* DRSFileReader.m in Sources */,
+				1432B2AC179DE0CE0032B5C7 /* DRSGridGoal.m in Sources */,
+				1432B29F179DB8C50032B5C7 /* DRSGridTree.m in Sources */,
+				1432B2AF179DE3AC0032B5C7 /* DRSMazeGrid.m in Sources */,
 				1432B26F179DA2BE0032B5C7 /* DRSViewController.m in Sources */,
+				1432B2A9179DDDAC0032B5C7 /* DRSGridTeleport.m in Sources */,
+				1432B2A4179DDA5F0032B5C7 /* DRSGridPlayer.m in Sources */,
 				1432B265179DA2BE0032B5C7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
