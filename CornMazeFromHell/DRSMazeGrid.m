@@ -70,16 +70,17 @@ typedef NS_ENUM(char, GridObjectSymbolType) {
                 case GridObjectSymbolTypeGoal: {
                     DRSGridGoal *goal = [[DRSGridGoal alloc] init];
                     [goal setGridPosition:position];
+                    
                     [_gridObjects setObject:goal forKey:position];
                     break;
                 }
                 default: {
                     /*Teleports. 'X' will not be in the set.*/
-                    if ([[NSCharacterSet letterCharacterSet] characterIsMember:c]) {
+                    if ([[NSCharacterSet letterCharacterSet] characterIsMember:[stringLine characterAtIndex:c]]) {
                         DRSGridTeleport *teleport = [[DRSGridTeleport alloc] init];
                         [teleport setGridPosition:position];
                         [teleport setColor:[SKColor magentaColor]];
-                        NSString *key = [NSString stringWithFormat:@"%c", c];
+                        NSString *key = [NSString stringWithFormat:@"%c", [stringLine characterAtIndex:c]];
                         if ([unplacedTeleports objectForKey:key]) {
                             DRSGridTeleport *buddyTeleport = [unplacedTeleports objectForKey:key];
                             

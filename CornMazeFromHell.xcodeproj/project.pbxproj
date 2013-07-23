@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142BA29A179EEA14002AD539 /* goal.png in Resources */ = {isa = PBXBuildFile; fileRef = 142BA299179EEA14002AD539 /* goal.png */; };
 		1432B257179DA2BE0032B5C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1432B256179DA2BE0032B5C7 /* Foundation.framework */; };
 		1432B259179DA2BE0032B5C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1432B258179DA2BE0032B5C7 /* CoreGraphics.framework */; };
 		1432B25B179DA2BE0032B5C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1432B25A179DA2BE0032B5C7 /* UIKit.framework */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		142BA299179EEA14002AD539 /* goal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goal.png; sourceTree = "<group>"; };
 		1432B253179DA2BE0032B5C7 /* CornMazeFromHell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CornMazeFromHell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1432B256179DA2BE0032B5C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1432B258179DA2BE0032B5C7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -172,6 +174,7 @@
 				1432B25F179DA2BE0032B5C7 /* Supporting Files */,
 				1432B292179DA4260032B5C7 /* lvl1.txt */,
 				14F80F41179EE5E600C26520 /* teleport.png */,
+				142BA299179EEA14002AD539 /* goal.png */,
 				1432B2A5179DDD3C0032B5C7 /* player.png */,
 				1432B2A0179DD8110032B5C7 /* tree.png */,
 			);
@@ -303,6 +306,7 @@
 			files = (
 				1432B2A6179DDD3C0032B5C7 /* player.png in Resources */,
 				1432B263179DA2BE0032B5C7 /* InfoPlist.strings in Resources */,
+				142BA29A179EEA14002AD539 /* goal.png in Resources */,
 				1432B276179DA2BE0032B5C7 /* Images.xcassets in Resources */,
 				1432B274179DA2BE0032B5C7 /* Spaceship.png in Resources */,
 				1432B2A1179DD8110032B5C7 /* tree.png in Resources */,
