@@ -3,34 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>310EB7B3-86A1-4AA8-B19B-CD912DB60FA4</string>
+	<string>86AB709A-AA1C-4936-8CBB-6EC7E2469DD4</string>
 	<key>IDESourceControlProjectName</key>
 	<string>CornMazeFromHell</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>6732742E-367A-4899-86C6-560742266ADF</key>
-		<string>https://github.com/danrschlosser/CornMazeFromHell.git</string>
+		<key>43CF133E-94C8-46C7-B016-A645B69DC450</key>
+		<string>ssh://github.com/mpotoski/CornMazeFromHell.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CornMazeFromHell.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>6732742E-367A-4899-86C6-560742266ADF</key>
+		<key>43CF133E-94C8-46C7-B016-A645B69DC450</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/danrschlosser/CornMazeFromHell.git</string>
+	<string>ssh://github.com/mpotoski/CornMazeFromHell.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6732742E-367A-4899-86C6-560742266ADF</string>
+	<string>43CF133E-94C8-46C7-B016-A645B69DC450</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6732742E-367A-4899-86C6-560742266ADF</string>
+			<string>43CF133E-94C8-46C7-B016-A645B69DC450</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CornMazeFromHell</string>
 		</dict>

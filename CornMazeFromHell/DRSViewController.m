@@ -28,6 +28,10 @@
     [skView presentScene:scene];
 }
 
+- (void)movePlayer {
+    NSLog(@"player moving");
+}
+
 - (BOOL)shouldAutorotate
 {
     return YES;

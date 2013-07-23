@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class DRSPosition;
+@class DRSGridPlayer;
 
 @interface DRSMazeGrid : NSObject
 
@@ -16,6 +17,10 @@
 @property (nonatomic) NSNumber *rows;
 @property (nonatomic) NSNumber *cols;
 
+@property (nonatomic, strong) DRSGridPlayer *player;
+
 - (id) initWithLevel:(NSNumber *)levelNumber;
+
+- (BOOL)isValidPosition:(DRSPosition *)p;
 
 @end

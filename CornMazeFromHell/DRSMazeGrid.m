@@ -24,6 +24,10 @@ typedef NS_ENUM(char, GridObjectSymbolType) {
     DRSFileReader *_fileReader;
 }
 
+- (BOOL)isValidPosition:(DRSPosition *)p {
+    return (p.row < [self.rows intValue] && p.col < [self.cols intValue]);
+}
+
 - (id)initWithLevel:(NSNumber *)levelNumber
 {
     self = [super init];
@@ -61,16 +65,16 @@ typedef NS_ENUM(char, GridObjectSymbolType) {
                     break;
                 }
                 case GridObjectSymbolTypeStartLocation: {
-                    [self setPlayerPosition:position];
+                    // [self setPlayerPosition:position];
                     DRSGridPlayer *player = [[DRSGridPlayer alloc] init];
                     [player setGridPosition:position];
-                    [_gridObjects setObject:player forKey:position];
+                    [self setPlayer:player];
+                    // [_gridObjects setObject:player forKey:position];
                     break;
                 }
                 case GridObjectSymbolTypeGoal: {
                     DRSGridGoal *goal = [[DRSGridGoal alloc] init];
                     [goal setGridPosition:position];
-                    
                     [_gridObjects setObject:goal forKey:position];
                     break;
                 }

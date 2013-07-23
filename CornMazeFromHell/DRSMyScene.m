@@ -9,6 +9,17 @@
 #import "DRSMyScene.h"
 #import "DRSMazeGrid.h"
 #import "DRSGridObject.h"
+#import "DRSPosition.h"
+#import "DRSGridGoal.h"
+#import "DRSGridTeleport.h"
+#import "DRSGridPlayer.h"
+
+typedef enum Direction {
+    Up,
+    Down,
+    Right,
+    Left
+} Direction;
 
 
 @implementation DRSMyScene {
@@ -25,6 +36,7 @@
         [self calculateAndSetMazeGridBoundsAndSquareHeight];
 
         [self populateWithObjects];
+        [self drawPlayerObject];
     }
     return self;
 }
@@ -38,6 +50,14 @@
         gridObject.position = CGPointMake(p.col * [self squareHeight] - self.mazeGridBounds.size.width/2, p.row * [self squareHeight] - self.mazeGridBounds.size.height/2);
         [[self mazeGridBounds] addChild:gridObject];
     }
+}
+
+- (void)drawPlayerObject {
+    DRSGridPlayer *player = self.mazeGrid.player;
+    DRSPosition *p = player.gridPosition;
+    [player setAnchorPoint:CGPointMake(0, 0)];
+    player.position = CGPointMake(p.col * [self squareHeight] - self.mazeGridBounds.size.width/2, p.row * [self squareHeight] - self.mazeGridBounds.size.height/2);
+    [[self mazeGridBounds] addChild:player];
 }
 
 -(void)calculateAndSetMazeGridBoundsAndSquareHeight {
@@ -64,7 +84,7 @@
     [self addChild:[self mazeGridBounds]];
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+// -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
 //    for (UITouch *touch in touches) {
@@ -80,10 +100,88 @@
 //        
 //        [self addChild:sprite];
 //    }
-}
+// }
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
 }
+
+
+#pragma mark - User interaction
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInView:self.view];
+    Direction d = [self directionFromPoint:location];
+    [self movePlayer:d];
+}
+
+- (Direction)directionFromPoint:(CGPoint)location {
+
+    CGFloat width = self.view.bounds.size.width;
+    CGFloat height = self.view.bounds.size.height;
+    
+    // downLine: imaginary line from top left to bottom right
+    // upLine: imaginary line from bottom left to top right
+    BOOL aboveDownLine = (location.y < (location.x * height / width));
+    BOOL aboveUpLine = (location.y < (height - location.x * height / width));
+    
+    // return Direction based on position relative to lines
+    if (aboveDownLine && aboveUpLine) return 0;
+    else if (aboveDownLine) return 2;
+    else if (aboveUpLine) return 3;
+    else return 1;
+}
+
+- (void)movePlayer:(Direction)d {
+    DRSPosition *curr = self.mazeGrid.player.gridPosition;
+    DRSPosition *next = nil;
+    switch (d) {
+        case 0: // move up
+            next = [[DRSPosition alloc] initWithRow:curr.row - 1 andCol:curr.col];
+            break;
+        case 1: // move down
+            next = [[DRSPosition alloc] initWithRow:curr.row + 1 andCol:curr.col];
+            break;
+        case 2: // move right
+            next = [[DRSPosition alloc] initWithRow:curr.row andCol:curr.col + 1];
+            break;
+        case 3: // move left
+            next = [[DRSPosition alloc] initWithRow:curr.row andCol:curr.col - 1];
+            break;
+        default:
+            break;
+    }
+    [self moveToPosition:next];
+}
+
+- (void)moveToPosition:(DRSPosition *)p {
+    if (![self.mazeGrid isValidPosition:p]) return;
+    DRSGridObject *objectAtPosition = [self.mazeGrid.gridObjects objectForKey:p];
+    if (objectAtPosition == nil) {
+        // empty, so can move here
+        self.mazeGrid.player.gridPosition = p;
+        [self.mazeGrid.player removeFromParent];
+        [self drawPlayerObject];
+    } else if ([objectAtPosition isKindOfClass:[DRSGridTeleport class]]) {
+        // move to teleport destination
+        DRSGridTeleport *teleport = (DRSGridTeleport *)objectAtPosition;
+        DRSGridTeleport *buddyTeleport = teleport.buddyTeleport;
+        self.mazeGrid.player.gridPosition = buddyTeleport.gridPosition;
+        [self.mazeGrid.player removeFromParent];
+        [self drawPlayerObject];
+    } else if ([objectAtPosition isKindOfClass:[DRSGridGoal class]]) {
+        self.mazeGrid.player.gridPosition = p;
+        [self.mazeGrid.player removeFromParent];
+        [self drawPlayerObject];
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"YOU WIN!"
+                                                     message:nil
+                                                    delegate:nil
+                                           cancelButtonTitle:@"Play again"
+                                           otherButtonTitles:nil];
+        [av show];
+    }
+}
+
 
 @end
