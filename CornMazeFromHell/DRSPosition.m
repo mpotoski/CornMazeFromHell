@@ -34,4 +34,14 @@
     return copy;
 }
 
+- (BOOL)isEqual:(DRSPosition *)object {
+    if (self.row == object.row && self.col == object.col)
+        return YES;
+    return NO;
+}
+
+-(NSUInteger)hash {
+    return 0;
+}
+
 @end

@@ -10,4 +10,14 @@
 
 @implementation DRSGridTeleport
 
+- (id)init
+{
+    SKTexture *teleportTexture = [SKTexture textureWithImageNamed:@"teleport.png"];
+    self = [super initWithTexture:teleportTexture];
+    if (self) {
+        [self setSolid:YES];
+    }
+    return self;
+}
+
 @end

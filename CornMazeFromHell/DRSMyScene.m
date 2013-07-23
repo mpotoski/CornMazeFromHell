@@ -21,11 +21,6 @@
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.3 blue:0.15 alpha:1.0];
         [self setMazeGrid:[[DRSMazeGrid alloc] initWithLevel:@1]];
-//        
-//        SKSpriteNode *box = [SKSpriteNode spriteNodeWithColor:[SKColor yellowColor] size:CGSizeMake(320,320)];
-//        box.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
-//        [self addChild:box];
-        
         
         [self calculateAndSetMazeGridBoundsAndSquareHeight];
 
@@ -36,11 +31,10 @@
 
 - (void)populateWithObjects {
     if (![self mazeGrid]) { return; }
-    
     for (DRSPosition *p in [[self mazeGrid] gridObjects]) {
         DRSGridObject *gridObject = [[[self mazeGrid] gridObjects] objectForKey:p];
-        [gridObject setColor:[SKColor purpleColor]];
         [gridObject setAnchorPoint:CGPointMake(0, 0)];
+//        [gridObject texture].size = CGSizeMake([self squareHeight], [self squareHeight])
         gridObject.position = CGPointMake(p.col * [self squareHeight] - self.mazeGridBounds.size.width/2, p.row * [self squareHeight] - self.mazeGridBounds.size.height/2);
         [[self mazeGridBounds] addChild:gridObject];
     }
@@ -55,9 +49,9 @@
     CGFloat selfAspectRatio = self.frame.size.height / self.frame.size.width;
     
     if (mazeAspectRatio <= selfAspectRatio) {
-        [self setSquareHeight:self.frame.size.width / [rows floatValue]];
+        [self setSquareHeight:self.frame.size.width / [cols floatValue]];
     } else {
-        [self setSquareHeight:self.frame.size.height / [cols floatValue]];
+        [self setSquareHeight:self.frame.size.height / [rows floatValue]];
     }
     
     CGFloat boundsWidth = [cols floatValue]*[self squareHeight];

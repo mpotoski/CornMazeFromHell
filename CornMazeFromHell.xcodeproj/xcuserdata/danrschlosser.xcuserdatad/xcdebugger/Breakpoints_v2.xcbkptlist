@@ -6,32 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CornMazeFromHell/DRSMyScene.m"
-            timestampString = "396247032.242102"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "-initWithSize:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CornMazeFromHell/DRSMyScene.m"
-            timestampString = "396247725.909397"
+            filePath = "CornMazeFromHell/DRSMazeGrid.m"
+            timestampString = "396289738.893283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-populateWithObjects"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-convertStringsToGridObjects:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

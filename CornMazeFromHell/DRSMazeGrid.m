@@ -34,6 +34,12 @@ typedef NS_ENUM(char, GridObjectSymbolType) {
         [self setRows:[_fileReader rowsForLevel:levelNumber]];
         [self setCols:[_fileReader columnsForLevel:levelNumber]];
         [self convertStringsToGridObjects:lines];
+        
+//        for (DRSPosition *p in [self gridObjects]) {
+//            NSLog(@"WHAT %i, %i", p.row, p.col);
+//            NSLog(@"WHAT %@", [[self gridObjects] objectForKey:p]);
+//        }
+        
     }
     return self;
 }
@@ -45,7 +51,6 @@ typedef NS_ENUM(char, GridObjectSymbolType) {
 
         NSString *stringLine = stringLines[r];
         for (int c = 0; c < [stringLine length]; c++) {
-           
             DRSPosition *position = [[DRSPosition alloc] initWithRow:r andCol:c];
             
             switch ([stringLine characterAtIndex:c]) {
@@ -57,6 +62,9 @@ typedef NS_ENUM(char, GridObjectSymbolType) {
                 }
                 case GridObjectSymbolTypeStartLocation: {
                     [self setPlayerPosition:position];
+                    DRSGridPlayer *player = [[DRSGridPlayer alloc] init];
+                    [player setGridPosition:position];
+                    [_gridObjects setObject:player forKey:position];
                     break;
                 }
                 case GridObjectSymbolTypeGoal: {
@@ -70,7 +78,7 @@ typedef NS_ENUM(char, GridObjectSymbolType) {
                     if ([[NSCharacterSet letterCharacterSet] characterIsMember:c]) {
                         DRSGridTeleport *teleport = [[DRSGridTeleport alloc] init];
                         [teleport setGridPosition:position];
-                        
+                        [teleport setColor:[SKColor magentaColor]];
                         NSString *key = [NSString stringWithFormat:@"%c", c];
                         if ([unplacedTeleports objectForKey:key]) {
                             DRSGridTeleport *buddyTeleport = [unplacedTeleports objectForKey:key];

@@ -35,6 +35,7 @@
 		1432B2AC179DE0CE0032B5C7 /* DRSGridGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B2AB179DE0CE0032B5C7 /* DRSGridGoal.m */; };
 		1432B2AF179DE3AC0032B5C7 /* DRSMazeGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B2AE179DE3AC0032B5C7 /* DRSMazeGrid.m */; };
 		1432B2B2179DEF710032B5C7 /* DRSPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B2B1179DEF710032B5C7 /* DRSPosition.m */; };
+		14F80F42179EE5E600C26520 /* teleport.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F80F41179EE5E600C26520 /* teleport.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		1432B2AE179DE3AC0032B5C7 /* DRSMazeGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSMazeGrid.m; sourceTree = "<group>"; };
 		1432B2B0179DEF710032B5C7 /* DRSPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSPosition.h; sourceTree = "<group>"; };
 		1432B2B1179DEF710032B5C7 /* DRSPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSPosition.m; sourceTree = "<group>"; };
+		14F80F41179EE5E600C26520 /* teleport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teleport.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,14 +153,11 @@
 		1432B25E179DA2BE0032B5C7 /* CornMazeFromHell */ = {
 			isa = PBXGroup;
 			children = (
-				1432B29D179DB8C50032B5C7 /* DRSGridTree.h */,
-				1432B29E179DB8C50032B5C7 /* DRSGridTree.m */,
+				1432B2B3179E47910032B5C7 /* DRSGridObjects */,
 				1432B267179DA2BE0032B5C7 /* DRSAppDelegate.h */,
 				1432B268179DA2BE0032B5C7 /* DRSAppDelegate.m */,
 				1432B26A179DA2BE0032B5C7 /* Main.storyboard */,
 				1432B26D179DA2BE0032B5C7 /* DRSViewController.h */,
-				1432B2AA179DE0CE0032B5C7 /* DRSGridGoal.h */,
-				1432B2AB179DE0CE0032B5C7 /* DRSGridGoal.m */,
 				1432B2AD179DE3AC0032B5C7 /* DRSMazeGrid.h */,
 				1432B2AE179DE3AC0032B5C7 /* DRSMazeGrid.m */,
 				1432B26E179DA2BE0032B5C7 /* DRSViewController.m */,
@@ -168,16 +167,11 @@
 				1432B295179DA4B40032B5C7 /* DRSFileReader.m */,
 				1432B2B0179DEF710032B5C7 /* DRSPosition.h */,
 				1432B2B1179DEF710032B5C7 /* DRSPosition.m */,
-				1432B297179DB7710032B5C7 /* DRSGridObject.h */,
-				1432B298179DB7710032B5C7 /* DRSGridObject.m */,
-				1432B2A2179DDA5F0032B5C7 /* DRSGridPlayer.h */,
-				1432B2A3179DDA5F0032B5C7 /* DRSGridPlayer.m */,
-				1432B2A7179DDDAC0032B5C7 /* DRSGridTeleport.h */,
-				1432B2A8179DDDAC0032B5C7 /* DRSGridTeleport.m */,
 				1432B273179DA2BE0032B5C7 /* Spaceship.png */,
 				1432B275179DA2BE0032B5C7 /* Images.xcassets */,
 				1432B25F179DA2BE0032B5C7 /* Supporting Files */,
 				1432B292179DA4260032B5C7 /* lvl1.txt */,
+				14F80F41179EE5E600C26520 /* teleport.png */,
 				1432B2A5179DDD3C0032B5C7 /* player.png */,
 				1432B2A0179DD8110032B5C7 /* tree.png */,
 			);
@@ -211,6 +205,23 @@
 				1432B285179DA2BE0032B5C7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1432B2B3179E47910032B5C7 /* DRSGridObjects */ = {
+			isa = PBXGroup;
+			children = (
+				1432B2AA179DE0CE0032B5C7 /* DRSGridGoal.h */,
+				1432B2AB179DE0CE0032B5C7 /* DRSGridGoal.m */,
+				1432B29D179DB8C50032B5C7 /* DRSGridTree.h */,
+				1432B29E179DB8C50032B5C7 /* DRSGridTree.m */,
+				1432B297179DB7710032B5C7 /* DRSGridObject.h */,
+				1432B298179DB7710032B5C7 /* DRSGridObject.m */,
+				1432B2A2179DDA5F0032B5C7 /* DRSGridPlayer.h */,
+				1432B2A3179DDA5F0032B5C7 /* DRSGridPlayer.m */,
+				1432B2A7179DDDAC0032B5C7 /* DRSGridTeleport.h */,
+				1432B2A8179DDDAC0032B5C7 /* DRSGridTeleport.m */,
+			);
+			name = DRSGridObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 				1432B274179DA2BE0032B5C7 /* Spaceship.png in Resources */,
 				1432B2A1179DD8110032B5C7 /* tree.png in Resources */,
 				1432B26C179DA2BE0032B5C7 /* Main.storyboard in Resources */,
+				14F80F42179EE5E600C26520 /* teleport.png in Resources */,
 				1432B293179DA4260032B5C7 /* lvl1.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +543,7 @@
 				1432B28E179DA2BE0032B5C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1432B28F179DA2BE0032B5C7 /* Build configuration list for PBXNativeTarget "CornMazeFromHellTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +552,7 @@
 				1432B291179DA2BE0032B5C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
