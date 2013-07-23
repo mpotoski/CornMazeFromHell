@@ -34,6 +34,7 @@
 		1432B2A9179DDDAC0032B5C7 /* DRSGridTeleport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B2A8179DDDAC0032B5C7 /* DRSGridTeleport.m */; };
 		1432B2AC179DE0CE0032B5C7 /* DRSGridGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B2AB179DE0CE0032B5C7 /* DRSGridGoal.m */; };
 		1432B2AF179DE3AC0032B5C7 /* DRSMazeGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B2AE179DE3AC0032B5C7 /* DRSMazeGrid.m */; };
+		1432B2B2179DEF710032B5C7 /* DRSPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1432B2B1179DEF710032B5C7 /* DRSPosition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		1432B2AB179DE0CE0032B5C7 /* DRSGridGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSGridGoal.m; sourceTree = "<group>"; };
 		1432B2AD179DE3AC0032B5C7 /* DRSMazeGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSMazeGrid.h; sourceTree = "<group>"; };
 		1432B2AE179DE3AC0032B5C7 /* DRSMazeGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSMazeGrid.m; sourceTree = "<group>"; };
+		1432B2B0179DEF710032B5C7 /* DRSPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSPosition.h; sourceTree = "<group>"; };
+		1432B2B1179DEF710032B5C7 /* DRSPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSPosition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,9 +163,11 @@
 				1432B2AE179DE3AC0032B5C7 /* DRSMazeGrid.m */,
 				1432B26E179DA2BE0032B5C7 /* DRSViewController.m */,
 				1432B270179DA2BE0032B5C7 /* DRSMyScene.h */,
+				1432B271179DA2BE0032B5C7 /* DRSMyScene.m */,
 				1432B294179DA4B40032B5C7 /* DRSFileReader.h */,
 				1432B295179DA4B40032B5C7 /* DRSFileReader.m */,
-				1432B271179DA2BE0032B5C7 /* DRSMyScene.m */,
+				1432B2B0179DEF710032B5C7 /* DRSPosition.h */,
+				1432B2B1179DEF710032B5C7 /* DRSPosition.m */,
 				1432B297179DB7710032B5C7 /* DRSGridObject.h */,
 				1432B298179DB7710032B5C7 /* DRSGridObject.m */,
 				1432B2A2179DDA5F0032B5C7 /* DRSGridPlayer.h */,
@@ -320,6 +325,7 @@
 				1432B26F179DA2BE0032B5C7 /* DRSViewController.m in Sources */,
 				1432B2A9179DDDAC0032B5C7 /* DRSGridTeleport.m in Sources */,
 				1432B2A4179DDA5F0032B5C7 /* DRSGridPlayer.m in Sources */,
+				1432B2B2179DEF710032B5C7 /* DRSPosition.m in Sources */,
 				1432B265179DA2BE0032B5C7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

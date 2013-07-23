@@ -7,7 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+@class DRSMazeGrid;
 
 @interface DRSMyScene : SKScene
+
+@property (nonatomic, strong) DRSMazeGrid *mazeGrid;
+@property (nonatomic, strong) SKSpriteNode *mazeGridBounds;
+@property (nonatomic) CGFloat squareHeight;
 
 @end

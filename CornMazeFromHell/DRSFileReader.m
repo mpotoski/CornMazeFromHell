@@ -19,17 +19,32 @@
 
 @implementation DRSFileReader
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _loadedLevels = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
+
 -(NSArray *)mazeStringsRepresentationForLevel:(NSNumber *)levelNumber {
     NSArray *lines = [self linesForLevel:levelNumber];
-    return [lines subarrayWithRange:NSMakeRange(1, (NSUInteger)[self rowsForLevel:levelNumber])];
+    NSRange range = NSMakeRange(1, [[self rowsForLevel:levelNumber] integerValue]);
+    return [lines subarrayWithRange: range];
 }
 
 - (NSArray *)linesForLevel:(NSNumber *)levelNumber {
     if(![_loadedLevels objectForKey:levelNumber]) {
-        NSString *filename = [NSString stringWithFormat:@"lvl%@.txt", levelNumber];
-        NSString * fileContents = [NSString stringWithContentsOfFile:filename encoding:NSASCIIStringEncoding error:nil];
-        NSArray * lines = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-        [_loadedLevels setObject:lines forKey:levelNumber];
+        NSString *filename = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"lvl%@", levelNumber] ofType:@"txt"];
+        NSError *error = nil;
+        NSString * fileContents = [NSString stringWithContentsOfFile:filename encoding:NSASCIIStringEncoding error:&error];
+        if (!error) {
+            NSArray * lines = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+            [_loadedLevels setObject:lines forKey:levelNumber];
+        } else {
+            NSLog(@"Error reading file: %@", [error localizedDescription]);
+        }
     }
     return [_loadedLevels objectForKey:levelNumber];
 }
@@ -39,12 +54,12 @@
 
 - (NSNumber *)rowsForLevel:(NSNumber *)levelNumber {
     NSArray *dimensions = [self dimensionsForLevel:levelNumber];
-    return [NSNumber numberWithInt:[[dimensions objectAtIndex:0] integerValue]];
+    return [NSNumber numberWithInteger:[(NSString *)[dimensions objectAtIndex:0] integerValue]];
 }
 
 - (NSNumber *)columnsForLevel:(NSNumber *)levelNumber {
     NSArray *dimensions = [self dimensionsForLevel:levelNumber];
-    return [NSNumber numberWithInt:[[dimensions objectAtIndex:1] integerValue]];
+    return [NSNumber numberWithInteger:[(NSString *)[dimensions objectAtIndex:1] integerValue]];
 }
 
 - (NSArray *)dimensionsForLevel:(NSNumber *)levelNumber {

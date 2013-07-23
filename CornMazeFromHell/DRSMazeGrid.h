@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+@class DRSPosition;
 
 @interface DRSMazeGrid : NSObject
 
-- (void) initWithLevel:(NSNumber *)levelNumber;
+@property (nonatomic, strong) NSMutableDictionary *gridObjects;
+@property (nonatomic, strong) DRSPosition *playerPosition;
+@property (nonatomic) NSNumber *rows;
+@property (nonatomic) NSNumber *cols;
+
+- (id) initWithLevel:(NSNumber *)levelNumber;
 
 @end

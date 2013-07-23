@@ -10,4 +10,6 @@
 
 @interface DRSGridTeleport : DRSGridObject
 
+@property (nonatomic, weak) DRSGridTeleport *buddyTeleport;
+
 @end
